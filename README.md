@@ -6,9 +6,9 @@ If the user has the Buffer iPhone app intalled on their device, it'll be opened 
 
 ###Step 1: Download the Buffer SDK Framework ###
 
-You can download the Buffer SDK here:
+You can download the Buffer SDK here: https://github.com/bufferapp/buffer-ios-sdk/archive/master.zip
 
-You can watch/checkout the Buffer SDK from GitHub here:
+You can watch/checkout the Buffer SDK from GitHub here: https://github.com/bufferapp/buffer-ios-sdk
 
 ###Step 2: Add the Buffer SDK to your Xcode Project###
 
