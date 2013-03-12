@@ -66,7 +66,7 @@ There are two methods to present the Buffer Sheet. You can display the Buffer sh
 
 We suggest you trigger the Buffer Sheet presentation via a user interaction, passing in the text that will pre-fill the sheet. Any code within the completion block will be called once an update has successfully posted as the modal is dismissed. 
 
-    [BufferAPI presentBufferSheetWithText:@"This is a test." withinView:self completionBlock:^(NSDictionary *response){
+    [BufferAPI presentBufferSheetWithText:@"This is a test." completionBlock:^(NSDictionary *response){
         NSLog(@"response %@", response);
     }];
 
