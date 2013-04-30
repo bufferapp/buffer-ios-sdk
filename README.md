@@ -22,16 +22,16 @@ You can watch/checkout the Buffer SDK from GitHub here: https://github.com/buffe
 - Add BufferSDK.framework to your Link Binary With Libraries Build Phase.
 
 **In order to use the Buffer SDK your project also needs the following frameworks added to Link Binary With Libraries Build Phase...**
-AdSupport.framework
-libsqlite3.0.dylib
-Twitter.framework
-Accounts.framework
-Security.framework
-QuartzCore.framework
-SystemConfiguration.framework
-MobileCoreServices.framework
-CoreGraphics.framework
-[FacebookSDK.framework](https://github.com/facebook/facebook-ios-sdk)
+- AdSupport.framework
+- libsqlite3.0.dylib
+- Twitter.framework
+- Accounts.framework
+- Security.framework
+- QuartzCore.framework
+- SystemConfiguration.framework
+- MobileCoreServices.framework
+- CoreGraphics.framework
+- [FacebookSDK.framework](https://github.com/facebook/facebook-ios-sdk)
 
 
 ###Step 3: Create a Buffer App###
