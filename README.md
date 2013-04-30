@@ -1,6 +1,11 @@
-The Buffer iOS SDK allows you to add Buffer to your iOS app with relative ease. The SDK allows you to present a Buffer Composer Sheet from a button action or using our UIActivity. If an update fails depending on the error it'll be saved into an offline queue to be sent later.
+Here is a step by step guide to make adding the Buffer iOS SDK to your iOS app easy and straightforward. With the SDK you can present a Buffer Composer Sheet (similar to the Twitter sheet). You can trigger this from a button or using our UIActivity. Here we go:
 
-If the user has the Buffer iPhone app intalled on their device, it'll be opened automatically when the user opens the Buffer Composer Sheet for the first time to authenticate your app to access Buffer. If the user doesn't have Buffer for iPhone installed they'll be taken to Safari to complete the normal OAuth2 login before being redirected back to your app.
+## Features
+
+* Easy Buffer Authentication if the user has Buffer for iPhone installed. http://cl.ly/image/0t1H0l3H2203
+* iOS6 Native Twitter Authentication.  
+* Offline Saving, if an update fails due to a network error the update will be saved and added to Buffer once connectivity is available again.
+
 
 ## How To Get Started
 
@@ -13,12 +18,26 @@ You can watch/checkout the Buffer SDK from GitHub here: https://github.com/buffe
 ###Step 2: Add the Buffer SDK to your Xcode Project###
 
 - Open your Xcode project.
-- Drag the BufferSDK.embeddedframework folder within the Buffer SDK example project into your project.
+- Drag the BufferSDK.embeddedframework folder within the Buffer SDK example project into your project, this contains the compiled framework along with image assets required by the SDK.
 - Add BufferSDK.framework to your Link Binary With Libraries Build Phase.
+
+**In order to use the Buffer SDK your project also needs the following frameworks added to Link Binary With Libraries Build Phase...**
+AdSupport.framework
+libsqlite3.0.dylib
+Twitter.framework
+Accounts.framework
+Security.framework
+QuartzCore.framework
+SystemConfiguration.framework
+MobileCoreServices.framework
+CoreGraphics.framework
+[FacebookSDK.framework](https://github.com/facebook/facebook-ios-sdk)
+
 
 ###Step 3: Create a Buffer App###
 
 Head over to the [http://bufferapp.com/developers/](Buffer Developers) section to create your Buffer App, it will provide you with all the details you need to continue setting up the Buffer SDK within your app.
+
 
 ###Step 4: Configure the Buffer SDK in your App Delegate###
 
@@ -45,7 +64,7 @@ In order to authenticate with the Buffer API, Buffer for iPhone needs to open yo
 
     [[BufferSDK sharedAPI] handleOpenURL:url];
     
-You will now need to register a URL scheme to recieve the authentication callbacks. The SDK uses "bufferappauth" plus your application's client ID you set up in Step 4. If for instance your Client ID is XXXXXXXXXX your URL scheme will be "bufferappauthXXXXXXXXXX". If you have a URL scheme already for your app simply add it as another item.
+You will now need to register a URL scheme to recieve the authentication callbacks. The SDK uses "bufferappauth" plus your application's client ID you set up in Step 4. If for instance your Client ID is XXXX your URL scheme will be "bufferXXXX". If you have a URL scheme already for your app simply add it as another item.
     
 To add a URL Scheme to your application, create a block like the one below in your Info.plist, updating it with the app’s scheme:
 
@@ -53,7 +72,7 @@ To add a URL Scheme to your application, create a block like the one below in yo
 		▾ Item 0 (Dictionary)
 			  URL Identifier (String) com.getpocket.sdk
 			▾ URL Schemes (Array) (1 item)
-				Item 0	(String) [YOUR URL SCHEME, for instance "bufferappauthXXXXXXXXXX"]
+				Item 0	(String) [YOUR URL SCHEME, for instance "bufferXXXX"]
 
 
 ###Step 6: Present the Buffer Sheet to the user###
@@ -87,4 +106,4 @@ The Buffer UIActivity can be used alongside other UIActivity's, when triggered t
 
 ## Contact
 
-Got a question about the SDK? [Drop us an email](mailto:api@bufferapp.com).
+We'd love to help with any questions you might have on this. Just drop us an email [api@bufferapp.com](mailto:api@bufferapp.com) any time.
