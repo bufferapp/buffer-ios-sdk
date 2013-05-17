@@ -9,7 +9,7 @@ Here is a step by step guide to make adding the Buffer iOS SDK to your iOS app e
 
 ## How To Get Started
 
-###Step 1: Download the Buffer SDK Framework ###
+###Step 1: Download the Buffer SDK ###
 
 You can download the Buffer SDK here: https://github.com/bufferapp/buffer-ios-sdk/archive/master.zip
 
@@ -18,8 +18,7 @@ You can watch/checkout the Buffer SDK from GitHub here: https://github.com/buffe
 ###Step 2: Add the Buffer SDK to your Xcode Project###
 
 - Open your Xcode project.
-- Drag the BufferSDK.embeddedframework folder within the Buffer SDK example project into your project, this contains the compiled framework along with image assets required by the SDK.
-- Add BufferSDK.framework to your Link Binary With Libraries Build Phase.
+- Drag the BufferSDK folder within the Buffer SDK example project into your project, this contains the compiled framework along with image assets required by the SDK.
 
 **In order to use the Buffer SDK your project also needs the following frameworks added to Link Binary With Libraries Build Phase...**
 - AdSupport.framework
@@ -47,15 +46,15 @@ You configure the Buffer SDK within your App Delegate.
 
 At the top of your app delegate source file, you'll need to include the BufferAPI header. At the top of your class you should see other imports already. Just add this line:
 
-	#import <BufferSDK/BufferSDK.h>
-    
+	#import "BufferSDK.h"
+   
 You'll also need to include this wherever you call the BufferAPI object.
 
 ####Set Your Client ID and Client Secret####
 
 The Buffer SDK requires the details of the Buffer App you set up in Step 4 in order to make requests to the Buffer API. Include the following lines in your `application:didFinishLaunchingWithOptions:` method adding your Client ID, Client Secret set up within Step 3.
 
-    [[BufferAPI sharedAPI] setClientID:@"" AndClientSecret:@""];
+    [[BufferSDK sharedAPI] setClientID:@"" andClientSecret:@""];
 
 
 ###Step 5: Add the Buffer URL scheme###
@@ -85,7 +84,7 @@ There are two methods to present the Buffer Sheet. You can display the Buffer sh
 
 We suggest you trigger the Buffer Sheet presentation via a user interaction, passing in the text that will pre-fill the sheet. Any code within the completion block will be called once an update has successfully posted as the modal is dismissed. 
 
-    [BufferAPI presentBufferSheetWithText:@"This is a test." completionBlock:^(NSDictionary *response){
+    [BufferSDK presentBufferSheetWithText:@"This is a test." completionBlock:^(NSDictionary *response){
         NSLog(@"response %@", response);
     }];
 
