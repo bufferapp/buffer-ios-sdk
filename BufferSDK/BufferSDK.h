@@ -46,7 +46,7 @@
 +(void)setPresentingView:(id)view;
 
 // UIActivity
-+(UIActivity *)bufferUIActivity;
+//+(UIActivity *)bufferUIActivity;
 
 // Limit the service profiles the Composer displays.
 +(void)limitService:(NSString *)service;
