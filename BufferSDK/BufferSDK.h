@@ -6,10 +6,9 @@
 //  Copyright (c) 2013 Andrew Yates. All rights reserved.
 //
 
-
 #import <Foundation/Foundation.h>
 
-#define BUFFER_SDK_VERSION @"1.1"
+#define BUFFER_SDK_VERSION @"1.1.1"
 
 @interface BufferSDK : NSObject {
     NSString *clientID;
@@ -46,7 +45,7 @@
 +(void)setPresentingView:(id)view;
 
 // UIActivity
-//+(UIActivity *)bufferUIActivity;
+//+(NSObject *)bufferUIActivity;
 
 // Limit the service profiles the Composer displays.
 +(void)limitService:(NSString *)service;
