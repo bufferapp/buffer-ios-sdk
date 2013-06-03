@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-#define BUFFER_SDK_VERSION @"1.1.2"
+#define BUFFER_SDK_VERSION @"1.1.3"
 
 @interface BufferSDK : NSObject {
     NSString *clientID;
@@ -16,6 +16,7 @@
     NSString *clientRedirectURI;
     NSString *service;
     NSString *resourcePath;
+    BOOL shouldShortenURLS;
     id presentingView;
 }
 
@@ -24,6 +25,7 @@
 @property (nonatomic, retain) NSString *clientRedirectURI;
 @property (nonatomic, retain) NSString *service;
 @property (nonatomic, retain) NSString *resourcePath;
+@property (nonatomic) BOOL shouldShortenURLS;
 @property (nonatomic, retain) id presentingView;
 
 +(BufferSDK *)sharedAPI;
@@ -31,6 +33,7 @@
 // Configuration
 -(void)setClientID:(NSString *)appClientID andClientSecret:(NSString *)appClientSecret;
 -(void)setResourceBundlePath:(NSString *)path;
+-(void)shouldShortenURLS:(BOOL)enabled;
 +(NSString *)bufferSDKResourceBndlePath;
 
 // Handle Authentication
