@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-#define BUFFER_SDK_VERSION @"1.1.3"
+#define BUFFER_SDK_VERSION @"1.1.4"
 
 @interface BufferSDK : NSObject {
     NSString *clientID;
@@ -34,10 +34,10 @@
 -(void)setClientID:(NSString *)appClientID andClientSecret:(NSString *)appClientSecret;
 -(void)setResourceBundlePath:(NSString *)path;
 -(void)shouldShortenURLS:(BOOL)enabled;
-+(NSString *)bufferSDKResourceBndlePath;
++(NSString *)bufferSDKResourceBundlePath;
 
 // Handle Authentication
--(void)handleOpenURL:(NSURL *)url;
+-(BOOL)handleOpenURL:(NSURL *)url;
 
 // Presentation
 +(void)presentBufferSheetWithText:(NSString *)text;
