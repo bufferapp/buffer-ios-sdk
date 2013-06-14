@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>B16D3A05-883A-4343-8DE3-0103F4C09620</string>
+	<key>IDESourceControlProjectName</key>
+	<string>iOSSDKExampleProject</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>910D372D-9ACD-472E-ABA6-7868CDB68E2D</key>
+		<string>ssh://github.com/bufferapp/buffer-ios-sdk.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Examples/iOSSDKExampleProject/iOSSDKExampleProject.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>910D372D-9ACD-472E-ABA6-7868CDB68E2D</key>
+		<string>../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/bufferapp/buffer-ios-sdk.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>910D372D-9ACD-472E-ABA6-7868CDB68E2D</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>910D372D-9ACD-472E-ABA6-7868CDB68E2D</string>
+			<key>IDESourceControlWCCName</key>
+			<string>buffer-ios-sdk</string>
+		</dict>
+	</array>
+</dict>
+</plist>
