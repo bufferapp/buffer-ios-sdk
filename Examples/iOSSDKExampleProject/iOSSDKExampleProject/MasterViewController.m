@@ -45,7 +45,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 2;
+    return 1;
 }
 
 // Customize the appearance of table view cells.
