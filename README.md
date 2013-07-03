@@ -1,5 +1,9 @@
 Here is a step by step guide to make adding the Buffer iOS SDK to your iOS app easy and straightforward. With the SDK you can present a Buffer Composer Sheet (similar to the Twitter sheet). You can trigger this from a button or using our UIActivity. Here we go:
 
+![Buffer Login](http://cl.ly/image/0j0l0q2T1D3W/buffer2.jpg "Buffer Login")
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+![Buffer Composer](http://cl.ly/image/1k3X3z3O1n27/buffer1.jpg "Buffer Composer")
+
 ## Features
 
 * Easy Buffer Authentication if the user has Buffer for iPhone installed. http://cl.ly/image/0t1H0l3H2203
