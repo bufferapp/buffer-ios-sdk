@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		941005CC1784C89D002E3C01 /* ExampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 941005CB1784C89D002E3C01 /* ExampleViewController.xib */; };
+		941005CE1784D0D7002E3C01 /* libBufferSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 94980A0D175F340D001E9442 /* libBufferSDK.a */; };
 		949809A4175F1533001E9442 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 949809A3175F1533001E9442 /* UIKit.framework */; };
 		949809A6175F1533001E9442 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 949809A5175F1533001E9442 /* Foundation.framework */; };
 		949809A8175F1533001E9442 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 949809A7175F1533001E9442 /* CoreGraphics.framework */; };
@@ -20,7 +22,6 @@
 		949809C3175F1533001E9442 /* MasterViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 949809C1175F1533001E9442 /* MasterViewController_iPhone.xib */; };
 		949809C6175F1533001E9442 /* MasterViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 949809C4175F1533001E9442 /* MasterViewController_iPad.xib */; };
 		949809DB175F23B6001E9442 /* ExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 949809D9175F23B6001E9442 /* ExampleViewController.m */; };
-		949809DC175F23B6001E9442 /* ExampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 949809DA175F23B6001E9442 /* ExampleViewController.xib */; };
 		949809F4175F2B91001E9442 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 949809F3175F2B91001E9442 /* FacebookSDK.framework */; };
 		949809F5175F2BBB001E9442 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 949809F1175F2B7C001E9442 /* MobileCoreServices.framework */; };
 		949809F6175F2BBD001E9442 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 949809EF175F2B77001E9442 /* SystemConfiguration.framework */; };
@@ -32,10 +33,10 @@
 		949809FC175F2BCC001E9442 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 949809E3175F2ACE001E9442 /* AdSupport.framework */; };
 		949809FF175F2BE9001E9442 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 949809FD175F2BE0001E9442 /* Social.framework */; };
 		94980A0E175F340D001E9442 /* BufferSDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 94980A0C175F340D001E9442 /* BufferSDKResources.bundle */; };
-		94980A0F175F340D001E9442 /* libBufferSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 94980A0D175F340D001E9442 /* libBufferSDK.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		941005CB1784C89D002E3C01 /* ExampleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExampleViewController.xib; sourceTree = "<group>"; };
 		949809A0175F1533001E9442 /* iOSSDKExampleProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSSDKExampleProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		949809A3175F1533001E9442 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		949809A5175F1533001E9442 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -55,7 +56,6 @@
 		949809C5175F1533001E9442 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MasterViewController_iPad.xib; sourceTree = "<group>"; };
 		949809D8175F23B6001E9442 /* ExampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExampleViewController.h; sourceTree = "<group>"; };
 		949809D9175F23B6001E9442 /* ExampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExampleViewController.m; sourceTree = "<group>"; };
-		949809DA175F23B6001E9442 /* ExampleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExampleViewController.xib; sourceTree = "<group>"; };
 		949809E3175F2ACE001E9442 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		949809E5175F2AD8001E9442 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		949809E7175F2AE0001E9442 /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
@@ -89,13 +89,24 @@
 				949809F7175F2BBF001E9442 /* QuartzCore.framework in Frameworks */,
 				949809F5175F2BBB001E9442 /* MobileCoreServices.framework in Frameworks */,
 				949809F4175F2B91001E9442 /* FacebookSDK.framework in Frameworks */,
-				94980A0F175F340D001E9442 /* libBufferSDK.a in Frameworks */,
+				941005CE1784D0D7002E3C01 /* libBufferSDK.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		941005CD1784D0B2002E3C01 /* SDK */ = {
+			isa = PBXGroup;
+			children = (
+				94980A0B175F3402001E9442 /* BufferSDK.h */,
+				94980A0C175F340D001E9442 /* BufferSDKResources.bundle */,
+				94980A0D175F340D001E9442 /* libBufferSDK.a */,
+			);
+			name = SDK;
+			path = ../../../BufferSDK;
+			sourceTree = "<group>";
+		};
 		94980997175F1533001E9442 = {
 			isa = PBXGroup;
 			children = (
@@ -136,9 +147,7 @@
 		949809A9175F1533001E9442 /* iOSSDKExampleProject */ = {
 			isa = PBXGroup;
 			children = (
-				94980A0B175F3402001E9442 /* BufferSDK.h */,
-				94980A0C175F340D001E9442 /* BufferSDKResources.bundle */,
-				94980A0D175F340D001E9442 /* libBufferSDK.a */,
+				941005CD1784D0B2002E3C01 /* SDK */,
 				949809B2175F1533001E9442 /* AppDelegate.h */,
 				949809B3175F1533001E9442 /* AppDelegate.m */,
 				949809BB175F1533001E9442 /* MasterViewController.h */,
@@ -170,7 +179,7 @@
 			children = (
 				949809D8175F23B6001E9442 /* ExampleViewController.h */,
 				949809D9175F23B6001E9442 /* ExampleViewController.m */,
-				949809DA175F23B6001E9442 /* ExampleViewController.xib */,
+				941005CB1784C89D002E3C01 /* ExampleViewController.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -232,8 +241,8 @@
 				949809BA175F1533001E9442 /* Default-568h@2x.png in Resources */,
 				949809C3175F1533001E9442 /* MasterViewController_iPhone.xib in Resources */,
 				949809C6175F1533001E9442 /* MasterViewController_iPad.xib in Resources */,
-				949809DC175F23B6001E9442 /* ExampleViewController.xib in Resources */,
 				94980A0E175F340D001E9442 /* BufferSDKResources.bundle in Resources */,
+				941005CC1784C89D002E3C01 /* ExampleViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -354,6 +363,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/iOSSDKExampleProject\"",
+					"\"$(SRCROOT)/../../BufferSDK\"",
 				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
@@ -379,6 +389,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/iOSSDKExampleProject\"",
+					"\"$(SRCROOT)/../../BufferSDK\"",
 				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
