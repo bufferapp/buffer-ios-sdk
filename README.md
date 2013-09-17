@@ -73,7 +73,7 @@ To add a URL Scheme to your application, create a block like the one below in yo
 
 	▾ URL Types (Array)
 		▾ Item 0 (Dictionary)
-			  URL Identifier (String) com.getpocket.sdk
+			  URL Identifier (String) com.buffer.sdk
 			▾ URL Schemes (Array) (1 item)
 				Item 0	(String) [YOUR URL SCHEME, for instance "bufferXXXX"]
 
