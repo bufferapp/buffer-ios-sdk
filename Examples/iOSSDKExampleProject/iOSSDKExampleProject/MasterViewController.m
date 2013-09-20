@@ -8,6 +8,7 @@
 
 #import "MasterViewController.h"
 #import "ExampleViewController.h"
+#import "BufferSDK.h"
 
 @implementation MasterViewController
 
@@ -45,7 +46,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 1;
+    return 2;
 }
 
 // Customize the appearance of table view cells.
@@ -56,13 +57,17 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
-        if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-            cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-        }
     }
 
     if(indexPath.row == 0){
         cell.textLabel.text = @"Normal Presentation";
+        if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+            cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+        }
+    }
+    
+    if(indexPath.row == 1){
+        cell.textLabel.text = @"UIActivity Presentation";
     }
     
     return cell;
@@ -73,6 +78,17 @@
     if(indexPath.row == 0){
         ExampleViewController *exampleView = [[ExampleViewController alloc] init];
         [self.navigationController pushViewController:exampleView animated:YES];
+    }
+    
+    if(indexPath.row == 1){
+        NSString *text = @"I'm using the Buffer SDK UIActivity";
+        NSURL *url = [NSURL URLWithString:@"http://bufferapp.com/"];
+        
+        NSArray *activityItems = @[text, url];
+        
+        UIActivityViewController *activityView = [[UIActivityViewController alloc] initWithActivityItems:activityItems applicationActivities:@[ [BufferSDK bufferUIActivity] ]];
+        
+        [self presentViewController:activityView animated:YES completion:nil];
     }
 }
 
