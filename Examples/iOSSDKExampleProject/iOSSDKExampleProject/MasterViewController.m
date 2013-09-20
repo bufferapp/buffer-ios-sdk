@@ -46,7 +46,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 2;
+    return 3;
 }
 
 // Customize the appearance of table view cells.
@@ -70,6 +70,10 @@
         cell.textLabel.text = @"UIActivity Presentation";
     }
     
+    if(indexPath.row == 2){
+        cell.textLabel.text = @"Logout";
+    }
+    
     return cell;
 }
 
@@ -83,13 +87,22 @@
     if(indexPath.row == 1){
         NSString *text = @"I'm using the Buffer SDK UIActivity";
         NSURL *url = [NSURL URLWithString:@"http://bufferapp.com/"];
+        NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:@"https://si0.twimg.com/profile_images/2627489858/fe7hm2ounpuu2qfe5akj.jpeg"]];
         
-        NSArray *activityItems = @[text, url];
+        NSArray *activityItems = @[text, url, data];
         
         UIActivityViewController *activityView = [[UIActivityViewController alloc] initWithActivityItems:activityItems applicationActivities:@[ [BufferSDK bufferUIActivity] ]];
         
         [self presentViewController:activityView animated:YES completion:nil];
     }
+    
+    if(indexPath.row == 2){
+        [BufferSDK logout];
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Logged Out" message:@"SDK now logged out of Buffer." delegate:self cancelButtonTitle:@"Awesome" otherButtonTitles:nil, nil];
+        [alertView show];
+    }
+    
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 @end
