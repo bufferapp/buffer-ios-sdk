@@ -67,7 +67,7 @@ In order to authenticate with the Buffer API, Buffer for iPhone needs to open yo
 
     [[BufferSDK sharedAPI] handleOpenURL:url];
     
-You will now need to register a URL scheme to recieve the authentication callbacks. The SDK uses "bufferappauth" plus your application's client ID you set up in Step 4. If for instance your Client ID is XXXX your URL scheme will be "bufferXXXX". If you have a URL scheme already for your app simply add it as another item.
+You will now need to register a URL scheme to recieve the authentication callbacks. The SDK uses "buffer" plus your application's client ID you set up in Step 4. If for instance your Client ID is XXXX your URL scheme will be "bufferXXXX". If you have a URL scheme already for your app simply add it as another item.
     
 To add a URL Scheme to your application, create a block like the one below in your Info.plist, updating it with the app’s scheme:
 
