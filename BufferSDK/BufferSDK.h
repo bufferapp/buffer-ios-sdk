@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-#define BUFFER_SDK_VERSION @"1.2.0"
+#define BUFFER_SDK_VERSION @"1.2.1"
 
 @interface BufferSDK : NSObject {
     NSString *clientID;
@@ -31,31 +31,31 @@
 +(BufferSDK *)sharedAPI;
 
 // Configuration
--(void)setClientID:(NSString *)appClientID andClientSecret:(NSString *)appClientSecret;
--(void)setResourceBundlePath:(NSString *)path;
--(void)shouldShortenURLS:(BOOL)enabled;
-+(NSString *)bufferSDKResourceBundlePath;
+- (void)setClientID:(NSString *)appClientID andClientSecret:(NSString *)appClientSecret;
+- (void)setResourceBundlePath:(NSString *)path;
+- (void)shouldShortenURLS:(BOOL)enabled;
++ (NSString *)bufferSDKResourceBundlePath;
 
 // Handle Authentication
--(BOOL)handleOpenURL:(NSURL *)url;
+- (BOOL)handleOpenURL:(NSURL *)url;
 
 // Presentation
-+(void)presentBufferSheetWithText:(NSString *)text;
-+(void)presentBufferSheetWithText:(NSString *)text completionBlock:(void (^)(NSDictionary *response))block;
-+(void)presentBufferSheetWithText:(NSString *)text andImageURL:(NSString *)url;
-+(void)presentBufferSheetWithText:(NSString *)text andImageURL:(NSString *)url completionBlock:(void (^)(NSDictionary *response))block;
++ (void)presentBufferSheetWithText:(NSString *)text;
++ (void)presentBufferSheetWithText:(NSString *)text completionBlock:(void (^)(NSDictionary *response))block;
++ (void)presentBufferSheetWithText:(NSString *)text andImageURL:(NSString *)url;
++ (void)presentBufferSheetWithText:(NSString *)text andImageURL:(NSString *)url completionBlock:(void (^)(NSDictionary *response))block;
 
-+(void)setPresentingView:(id)view;
++ (void)setPresentingView:(id)view;
 
 // UIActivity
-+(UIActivity *)bufferUIActivity;
++ (UIActivity *)bufferUIActivity;
 
 // Limit the service profiles the Composer displays.
-+(void)limitService:(NSString *)service;
-+(void)resetServiceLimit;
++ (void)limitService:(NSString *)service;
++ (void)resetServiceLimit;
 
 // Authentication Methods
-+(BOOL)isLoggedIn;
-+(void)logout;
++ (BOOL)isLoggedIn;
++ (void)logout;
 
 @end
