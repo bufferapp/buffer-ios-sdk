@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-#define BUFFER_SDK_VERSION @"1.2.3"
+#define BUFFER_SDK_VERSION @"1.2.4"
 
 @interface BufferSDK : NSObject {
     NSString *clientID;
