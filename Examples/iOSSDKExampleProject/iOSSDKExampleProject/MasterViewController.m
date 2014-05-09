@@ -87,7 +87,7 @@
     if(indexPath.row == 1){
         NSString *text = @"I'm using the Buffer SDK UIActivity";
         NSURL *url = [NSURL URLWithString:@"http://bufferapp.com/"];
-        NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:@"https://si0.twimg.com/profile_images/2627489858/fe7hm2ounpuu2qfe5akj.jpeg"]];
+        NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:@"https://pbs.twimg.com/profile_images/433305817656209408/7_p0KjzM.png"]];
         
         NSArray *activityItems = @[text, url, data];
         
