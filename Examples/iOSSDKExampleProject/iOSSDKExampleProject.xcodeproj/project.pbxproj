@@ -33,6 +33,10 @@
 		949809FC175F2BCC001E9442 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 949809E3175F2ACE001E9442 /* AdSupport.framework */; };
 		949809FF175F2BE9001E9442 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 949809FD175F2BE0001E9442 /* Social.framework */; };
 		94980A0E175F340D001E9442 /* BufferSDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 94980A0C175F340D001E9442 /* BufferSDKResources.bundle */; };
+		94D45AF61A364594005AA980 /* Default-iPhone-55-landscape.png in Resources */ = {isa = PBXBuildFile; fileRef = 94D45AF31A364594005AA980 /* Default-iPhone-55-landscape.png */; };
+		94D45AF71A364594005AA980 /* Default-iPhone-55.png in Resources */ = {isa = PBXBuildFile; fileRef = 94D45AF41A364594005AA980 /* Default-iPhone-55.png */; };
+		94D45AF81A364594005AA980 /* plus.png in Resources */ = {isa = PBXBuildFile; fileRef = 94D45AF51A364594005AA980 /* plus.png */; };
+		94D45AFC1A3645B0005AA980 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94D45AFB1A3645B0005AA980 /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,6 +73,10 @@
 		94980A0B175F3402001E9442 /* BufferSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BufferSDK.h; sourceTree = "<group>"; };
 		94980A0C175F340D001E9442 /* BufferSDKResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = BufferSDKResources.bundle; sourceTree = "<group>"; };
 		94980A0D175F340D001E9442 /* libBufferSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libBufferSDK.a; sourceTree = "<group>"; };
+		94D45AF31A364594005AA980 /* Default-iPhone-55-landscape.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-iPhone-55-landscape.png"; sourceTree = "<group>"; };
+		94D45AF41A364594005AA980 /* Default-iPhone-55.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-iPhone-55.png"; sourceTree = "<group>"; };
+		94D45AF51A364594005AA980 /* plus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plus.png; sourceTree = "<group>"; };
+		94D45AFB1A3645B0005AA980 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +162,7 @@
 				949809BC175F1533001E9442 /* MasterViewController.m */,
 				949809C1175F1533001E9442 /* MasterViewController_iPhone.xib */,
 				949809C4175F1533001E9442 /* MasterViewController_iPad.xib */,
+				94D45AFB1A3645B0005AA980 /* Images.xcassets */,
 				949809D2175F2353001E9442 /* Views */,
 				949809AA175F1533001E9442 /* Supporting Files */,
 			);
@@ -170,6 +179,9 @@
 				949809B5175F1533001E9442 /* Default.png */,
 				949809B7175F1533001E9442 /* Default@2x.png */,
 				949809B9175F1533001E9442 /* Default-568h@2x.png */,
+				94D45AF31A364594005AA980 /* Default-iPhone-55-landscape.png */,
+				94D45AF41A364594005AA980 /* Default-iPhone-55.png */,
+				94D45AF51A364594005AA980 /* plus.png */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -237,10 +249,14 @@
 			files = (
 				949809AE175F1533001E9442 /* InfoPlist.strings in Resources */,
 				949809B6175F1533001E9442 /* Default.png in Resources */,
+				94D45AF71A364594005AA980 /* Default-iPhone-55.png in Resources */,
 				949809B8175F1533001E9442 /* Default@2x.png in Resources */,
 				949809BA175F1533001E9442 /* Default-568h@2x.png in Resources */,
 				949809C3175F1533001E9442 /* MasterViewController_iPhone.xib in Resources */,
 				949809C6175F1533001E9442 /* MasterViewController_iPad.xib in Resources */,
+				94D45AF61A364594005AA980 /* Default-iPhone-55-landscape.png in Resources */,
+				94D45AF81A364594005AA980 /* plus.png in Resources */,
+				94D45AFC1A3645B0005AA980 /* Images.xcassets in Resources */,
 				94980A0E175F340D001E9442 /* BufferSDKResources.bundle in Resources */,
 				941005CC1784C89D002E3C01 /* ExampleViewController.xib in Resources */,
 			);
@@ -352,6 +368,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Documents/FacebookSDK,
@@ -365,6 +383,7 @@
 					"\"$(SRCROOT)/iOSSDKExampleProject\"",
 					"\"$(SRCROOT)/../../BufferSDK\"",
 				);
+				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-all_load",
@@ -378,6 +397,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Documents/FacebookSDK,
